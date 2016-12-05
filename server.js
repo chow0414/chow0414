@@ -443,7 +443,7 @@ app.get('/gmap',function(req,res) {
 
 function addRate(db,resID,resScore,rateOwner,callback) {
 	db.collection('res').update(
-	{"_id" : objectId(resID)},
+	{"_id" : resID},
 	{$push:
 		{rate: {score :resScore,
 			owner:rateOwner}
